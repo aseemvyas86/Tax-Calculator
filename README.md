@@ -19,3 +19,26 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### Setup and Installation
+
+`git clone https://github.com/yourusername/tax-calculator.git`
+
+`npm install`
+
+#### Mock server
+```
+docker pull ptsdocker16/interview-test-server
+docker run --init -p 5001:5001 -it ptsdocker16/interview-test-server
+```
+
+### How to Change the Available Tax Years
+The Tax Calculator dynamically generates the list of valid tax years from constants. To change the available tax years:
+
+ src folder --> constants.ts
+
+```
+export const TAX_YEAR_START = 2019;
+export const TAX_YEAR_END = 2025; // Change this to update the range.
+
+```
